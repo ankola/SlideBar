@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Slidebar" customModule="SlideMenuSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="btnCloseMenuOverlay" destination="4Yt-II-XWU" id="tia-LK-p1B"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yt-II-XWU">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="onCloseMenuClick:" destination="-1" eventType="touchUpInside" id="YzU-nl-k6e"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTz-ew-8et">
+                    <rect key="frame" x="60" y="84" width="315" height="583"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2X-y7-812">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="70"/>
+                            <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="hfm-5Z-S2D"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="HOme"/>
+                            <connections>
+                                <action selector="onHomeClick:" destination="-1" eventType="touchUpInside" id="Nan-0y-3fM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuJ-nT-xT3">
+                            <rect key="frame" x="0.0" y="80" width="315" height="70"/>
+                            <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="N3v-e3-KuD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="PlayVC"/>
+                            <connections>
+                                <action selector="onPlayClick:" destination="-1" eventType="touchUpInside" id="xUS-Ba-7pN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="fuJ-nT-xT3" firstAttribute="top" secondItem="T2X-y7-812" secondAttribute="bottom" constant="10" id="5JD-0U-M8v"/>
+                        <constraint firstItem="T2X-y7-812" firstAttribute="leading" secondItem="nTz-ew-8et" secondAttribute="leading" id="Lbr-lz-8Zw"/>
+                        <constraint firstItem="fuJ-nT-xT3" firstAttribute="leading" secondItem="nTz-ew-8et" secondAttribute="leading" id="Qsu-OR-uTX"/>
+                        <constraint firstItem="T2X-y7-812" firstAttribute="top" secondItem="nTz-ew-8et" secondAttribute="top" id="s37-do-nDD"/>
+                        <constraint firstAttribute="trailing" secondItem="fuJ-nT-xT3" secondAttribute="trailing" id="ulm-K2-J1z"/>
+                        <constraint firstAttribute="trailing" secondItem="T2X-y7-812" secondAttribute="trailing" id="zA8-1f-CBV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4Yt-II-XWU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="09E-Ml-SRR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nTz-ew-8et" secondAttribute="trailing" id="2mi-XN-EZK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Yt-II-XWU" secondAttribute="trailing" id="Ada-VC-pSh"/>
+                <constraint firstItem="4Yt-II-XWU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HOM-x2-Omn"/>
+                <constraint firstItem="nTz-ew-8et" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="KkA-sr-ZUP"/>
+                <constraint firstItem="nTz-ew-8et" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="WS9-xd-Fsp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nTz-ew-8et" secondAttribute="bottom" id="fLb-EQ-8mT"/>
+                <constraint firstAttribute="bottom" secondItem="4Yt-II-XWU" secondAttribute="bottom" id="hyu-tk-3ij"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
